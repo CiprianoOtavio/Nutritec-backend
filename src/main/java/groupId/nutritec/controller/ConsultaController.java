@@ -1,11 +1,14 @@
 package groupId.nutritec.controller;
 
 import groupId.nutritec.model.Consulta;
+import groupId.nutritec.model.ConsultaData;
+import groupId.nutritec.model.Patient;
 import groupId.nutritec.service.ConsultaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("consultas")
@@ -21,13 +24,18 @@ public class ConsultaController {
     }
 
     @GetMapping("/{nutritionistId}")
-    public List<Consulta> getAllById(@PathVariable String nutritionistId){
-        return consultaService.getAllById(nutritionistId);
+    public List<Consulta> getAllByNutritionistId(@PathVariable String nutritionistId){
+        return consultaService.getAllByNutritionistId(nutritionistId);
     }
 
     @PostMapping
     public Consulta create(@RequestBody Consulta consulta){
         return consultaService.create(consulta);
+    }
+
+    @GetMapping("/data")
+    public List<ConsultaData> getConsultasInAgeRange(){
+        return consultaService.getConsultasInAgeRange();
     }
 
 }

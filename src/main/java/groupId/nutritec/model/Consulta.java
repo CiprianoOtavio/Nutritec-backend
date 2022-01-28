@@ -7,11 +7,6 @@ public class Consulta {
     private String patientId;
     private Long date;
 
-//    public String formatDate(LocalDateTime localDateTime){
-//        return DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(localDateTime);
-//    }
-
-
     public Consulta(String id, String nutritionistId, String patientId, Long date) {
         this.id = id;
         this.nutritionistId = nutritionistId;

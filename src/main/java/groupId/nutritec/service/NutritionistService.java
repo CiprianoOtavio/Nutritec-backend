@@ -33,5 +33,9 @@ public class NutritionistService {
         nutritionistRepository.deleteNutritionistByRegistration(registration);
     }
 
+    public List<Nutritionist> findAllByHealthPlan(String healthPlan){
+        return nutritionistRepository.findAllByHealthPlan(healthPlan);
+    }
+
 
 }

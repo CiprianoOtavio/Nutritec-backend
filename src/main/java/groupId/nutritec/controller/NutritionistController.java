@@ -40,4 +40,8 @@ public class NutritionistController {
         return nutritionistService.update(nutritionist);
     }
 
+    @GetMapping("/healthplan/{healthPlan}")
+    public List<Nutritionist> findAllByHealthPlan(@PathVariable String healthPlan){
+        return nutritionistService.findAllByHealthPlan(healthPlan);
+    }
 }
