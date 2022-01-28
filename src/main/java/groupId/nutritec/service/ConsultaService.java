@@ -25,4 +25,11 @@ public class ConsultaService {
         return consultaRepository.save(consulta);
     }
 
+    public Consulta update(Consulta consulta){
+        return consultaRepository.save(consulta);
+    }
+
+    public void delete(String id){
+        consultaRepository.deleteById(id);
+    }
 }
