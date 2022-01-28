@@ -38,4 +38,14 @@ public class ConsultaController {
         return consultaService.getConsultasInAgeRange();
     }
 
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable String id){
+        consultaService.delete(id);
+    }
+
+    @PutMapping
+    public Consulta update(@RequestBody Consulta consulta){
+        return consultaService.update(consulta);
+    }
+
 }
