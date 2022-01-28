@@ -2,13 +2,11 @@ package groupId.nutritec.controller;
 
 import groupId.nutritec.model.Consulta;
 import groupId.nutritec.model.ConsultaData;
-import groupId.nutritec.model.Patient;
 import groupId.nutritec.service.ConsultaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("consultas")
