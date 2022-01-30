@@ -4,14 +4,16 @@ import java.math.BigDecimal;
 
 public class Patient {
     private String id;
+    private String CPF;
     private String name;
     private int age;
     private BigDecimal weight;
     private BigDecimal height;
     private String healthPlan;
 
-    public Patient(String id, String name, int age, BigDecimal weight, BigDecimal height, String healthPlan) {
+    public Patient(String id, String CPF, String name, int age, BigDecimal weight, BigDecimal height, String healthPlan) {
         this.id = id;
+        this.CPF = CPF;
         this.name = name;
         this.age = age;
         this.weight = weight;
@@ -20,6 +22,14 @@ public class Patient {
     }
 
     public Patient() {
+    }
+
+    public String getCPF() {
+        return CPF;
+    }
+
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
     }
 
     public String getId() {

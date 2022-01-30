@@ -20,9 +20,9 @@ public class PatientController {
         return patientService.getAll();
     }
 
-    @GetMapping("/{id}")
-    public Patient findById(@PathVariable String id) {
-        return patientService.findById(id);
+    @GetMapping("/{CPF}")
+    public Patient findByCPF(@PathVariable String CPF) {
+        return patientService.findByCPF(CPF);
     }
 
     @PostMapping
@@ -30,9 +30,9 @@ public class PatientController {
         return patientService.create(patient);
     }
 
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable String id){
-        patientService.delete(id);
+    @DeleteMapping("/{CPF}")
+    public void delete(@PathVariable String CPF){
+        patientService.delete(CPF);
     }
 
     @PutMapping

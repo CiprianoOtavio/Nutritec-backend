@@ -4,13 +4,13 @@ import java.util.List;
 
 public class Nutritionist {
     private String id;
-    private Long registration;
+    private String registration;
     private String name;
     private int age;
     private String speciality;
     private List<String> healthPlan;
 
-    public Nutritionist(String id, Long registration, String name, int age, String speciality, List<String> healthPlan) {
+    public Nutritionist(String id, String registration, String name, int age, String speciality, List<String> healthPlan) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -30,11 +30,11 @@ public class Nutritionist {
         this.healthPlan = healthPlan;
     }
 
-    public Long getRegistration() {
+    public String getRegistration() {
         return registration;
     }
 
-    public void setRegistration(Long registration) {
+    public void setRegistration(String registration) {
         this.registration = registration;
     }
 

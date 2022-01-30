@@ -17,32 +17,37 @@ public class ConsultaController {
     private final ConsultaService consultaService;
 
     @GetMapping
-    public List<Consulta> getAll(){
+    public List<Consulta> getAll() {
         return consultaService.getAll();
     }
 
-    @GetMapping("/{nutritionistId}")
-    public List<Consulta> getAllByNutritionistId(@PathVariable String nutritionistId){
-        return consultaService.getAllByNutritionistId(nutritionistId);
+    @GetMapping("/{nutritionistRegistration}")
+    public List<Consulta> getAllByNutritionistRegistration(@PathVariable String nutritionistRegistration) {
+        return consultaService.getAllByNutritionistRegistration(nutritionistRegistration);
+    }
+
+    @GetMapping("/{id}")
+    public Consulta findById(@PathVariable String id) {
+        return consultaService.findById(id);
     }
 
     @PostMapping
-    public Consulta create(@RequestBody Consulta consulta){
+    public Consulta create(@RequestBody Consulta consulta) {
         return consultaService.create(consulta);
     }
 
     @GetMapping("/data")
-    public List<ConsultaData> getConsultasInAgeRange(){
+    public List<ConsultaData> getConsultasInAgeRange() {
         return consultaService.getConsultasInAgeRange();
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable String id){
+    public void delete(@PathVariable String id) {
         consultaService.delete(id);
     }
 
     @PutMapping
-    public Consulta update(@RequestBody Consulta consulta){
+    public Consulta update(@RequestBody Consulta consulta) {
         return consultaService.update(consulta);
     }
 
