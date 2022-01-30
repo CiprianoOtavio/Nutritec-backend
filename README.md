@@ -25,7 +25,6 @@ Deleta um nutricionista a partir de sua matrícula
 É esperado um json neste formato para editar um nutricionista no banco de dados
 ```js
    {
-        "id": "61f43e48c713ab27b1fb6a6c",
         "registration": 4237,
         "name": "Suel Nutras",
         "age": 22,
@@ -40,8 +39,8 @@ Deleta um nutricionista a partir de sua matrícula
 @get `nutritionists/healthplan/{healthPlan}`\
 Retorna nutricionistas por plano de saúde
 
-@get `nutritionists/{id}`\
-Retorna um nutricionista a partir de seu Id
+@get `nutritionists/{registration}`\
+Retorna um nutricionista a partir de sua matrícula
 
 
 ## Patients
@@ -53,6 +52,7 @@ Retorna todos os pacientes no banco de dados
 É esperado um json neste formato para salvar um paciente no banco de dados
 ```js
     {
+        "CPF": "15263584965"
         "name": "Jorgina",
         "age": 25,
         "weight": 56.16,
@@ -61,14 +61,14 @@ Retorna todos os pacientes no banco de dados
     }
 ```
 
-@delete `/patients/{id}`\
-Deleta um paciente a partir de seu Id
+@delete `/patients/{CPF}`\
+Deleta um paciente a partir de seu CPF
 
 @put `/patients`\
 É esperado um json neste formato para editar um paciente no banco de dados
 ```js
     {
-        "id": "61f33dc3f188405212f60488",
+        "CPF": "15263584965",
         "name": "Jorgina",
         "age": 25,
         "weight": 56.16,
@@ -77,8 +77,8 @@ Deleta um paciente a partir de seu Id
     }
 ```
 
-@get `/patients/{id}`\
-Retorna um nutricionista a partir de seu Id
+@get `/patients/{CPF}`\
+Retorna um nutricionista a partir de seu CPF
 
 
 ## Consulta
@@ -86,8 +86,8 @@ Retorna um nutricionista a partir de seu Id
 @get `/consultas`\
 Retorna todas as consultas no banco de dados
 
-@get `/consultas/{nutritionistId}`\
-Retorna todas as consultas de um nutricionista a partir de seu Id
+@get `/consultas/{nutritionistRegistration}`\
+Retorna todas as consultas de um nutricionista a partir de sua matrícula
 
 @get `/consultas/data`\
 Retorna as uma lista que relaciona quantidade de consultas por idade de paciente
@@ -96,21 +96,21 @@ Retorna as uma lista que relaciona quantidade de consultas por idade de paciente
 É esperado um json neste formato para salvar uma consulta no banco de dados
 ```js
     {
-        "nutritionistId": "61f330b721fafe5eb28374c4",
-        "patientId": "61f33ed059b3ea62f4239ad2",
-        "date": 1643338218
+        "nutritionistRegistration": "4237",
+        "patientCPF": "15263584965",
+        "date": "1643338218"
     }
 ```
-Obs.: A data deve, **obrigatoriamente**, estar no formato *timestamp*.
+Obs.: A data deve, **obrigatoriamente**, ser uma *String* no formato *Timestamp*.
 
 @put `/consultas`\
 É esperado um json neste formato para editar uma consulta no banco de dados
 ```js
     {
         "id": "61f35c7d8b2f7051ee9a6447",
-        "nutritionistId": "61f330b721fafe5eb28374c4",
-        "patientId": "61f33ed059b3ea62f4239ad2",
-        "date": 1643338218
+        "nutritionistRegistration": "4237",
+        "patientCPF": "15263584965",
+        "date": "1643338218"
     }
 ```
 
