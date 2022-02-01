@@ -45,6 +45,7 @@ public class PatientService {
         boolean name, data, CPF, validCPF = true;
 
         for (int i = 0; i < patient.getCPF().length(); i++) {
+            System.out.println("Teste");
             if (!patient.getCPF().substring(i).matches("[0-9]*")) {
                 validCPF = false;
             }

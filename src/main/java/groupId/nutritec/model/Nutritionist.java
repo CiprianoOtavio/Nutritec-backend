@@ -1,17 +1,18 @@
 package groupId.nutritec.model;
 
+import org.springframework.data.annotation.Id;
+
 import java.util.List;
 
 public class Nutritionist {
-    private String id;
+    @Id
     private String registration;
     private String name;
     private int age;
     private String speciality;
     private List<String> healthPlan;
 
-    public Nutritionist(String id, String registration, String name, int age, String speciality, List<String> healthPlan) {
-        this.id = id;
+    public Nutritionist(String registration, String name, int age, String speciality, List<String> healthPlan) {
         this.name = name;
         this.age = age;
         this.speciality = speciality;
@@ -36,14 +37,6 @@ public class Nutritionist {
 
     public void setRegistration(String registration) {
         this.registration = registration;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {

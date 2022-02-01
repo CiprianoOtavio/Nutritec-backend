@@ -66,7 +66,6 @@ public class ConsultaService {
                     }
                     continue;
                 }
-                System.out.println(String.format("CPF: %s", patient.get().getCPF()));
                 consultaDatas.get(j).setConsultaCount(consultaDatas.get(j).getConsultaCount() + 1);
                 break;
             }

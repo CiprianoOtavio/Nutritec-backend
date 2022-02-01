@@ -1,9 +1,11 @@
 package groupId.nutritec.model;
 
+import org.springframework.data.annotation.Id;
+
 import java.math.BigDecimal;
 
 public class Patient {
-    private String id;
+    @Id
     private String CPF;
     private String name;
     private int age;
@@ -11,8 +13,7 @@ public class Patient {
     private BigDecimal height;
     private String healthPlan;
 
-    public Patient(String id, String CPF, String name, int age, BigDecimal weight, BigDecimal height, String healthPlan) {
-        this.id = id;
+    public Patient(String CPF, String name, int age, BigDecimal weight, BigDecimal height, String healthPlan) {
         this.CPF = CPF;
         this.name = name;
         this.age = age;
@@ -30,14 +31,6 @@ public class Patient {
 
     public void setCPF(String CPF) {
         this.CPF = CPF;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {
