@@ -7,7 +7,7 @@ Retorna todos os nutricionistas no banco de dados
 É esperado um json neste formato para salvar um nutricionista no banco de dados
 ```js
    {
-        "registration": 4237,
+        "registration": "4237",
         "name": "Suel Nutras",
         "age": 22,
         "speciality": "Pamonha",
@@ -25,7 +25,7 @@ Deleta um nutricionista a partir de sua matrícula
 É esperado um json neste formato para editar um nutricionista no banco de dados
 ```js
    {
-        "registration": 4237,
+        "registration": "4237",
         "name": "Suel Nutras",
         "age": 22,
         "speciality": "Pamonha",
@@ -52,7 +52,7 @@ Retorna todos os pacientes no banco de dados
 É esperado um json neste formato para salvar um paciente no banco de dados
 ```js
     {
-        "CPF": "15263584965"
+        "cpf": "15263584965"
         "name": "Jorgina",
         "age": 25,
         "weight": 56.16,
@@ -68,7 +68,7 @@ Deleta um paciente a partir de seu CPF
 É esperado um json neste formato para editar um paciente no banco de dados
 ```js
     {
-        "CPF": "15263584965",
+        "cpf": "15263584965",
         "name": "Jorgina",
         "age": 25,
         "weight": 56.16,
