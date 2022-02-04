@@ -90,7 +90,7 @@ Retorna todas as consultas no banco de dados
 Retorna todas as consultas de um nutricionista a partir de sua matrícula
 
 @get `/consultas/data`\
-Retorna as uma lista que relaciona quantidade de consultas por idade de paciente
+Retorna uma lista que relaciona quantidade de consultas por idade de paciente
 
 @get `/consultas/nutritionistCount`\
 Retorna uma lista que mostra a quantidade de nutricionistas por plano de saúde
