@@ -41,6 +41,11 @@ public class ConsultaController {
         return consultaService.getConsultasInAgeRange();
     }
 
+    @GetMapping("/nutritionistCount")
+    public String[][] getNutritionistsByHealthPlan() {
+        return consultaService.getNutritionistsByHealthPlan();
+    }
+
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
         consultaService.delete(id);

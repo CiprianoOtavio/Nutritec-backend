@@ -77,6 +77,19 @@ public class ConsultaService {
         return consultaDatas;
     }
 
+    public String[][] getNutritionistsByHealthPlan() {
+        String[][] count = new String[3][2];
+
+        count[0][0] = "UT_MAIS";
+        count[0][1] = String.valueOf(nutritionistRepository.findAllByHealthPlan("UT_MAIS").size());
+        count[1][0] = "PLANO_VIDA";
+        count[1][1] = String.valueOf(nutritionistRepository.findAllByHealthPlan("PLANO_VIDA").size());
+        count[2][0] = "HAP_SAUDE";
+        count[2][1] = String.valueOf(nutritionistRepository.findAllByHealthPlan("HAP_SAUDE").size());
+
+        return count;
+    }
+
     public Consulta validateConsulta(Consulta consulta) {
         if (Instant.now().getEpochSecond() >= Integer.parseInt(consulta.getDate()))
             throw new CustomError("Invalid Date");

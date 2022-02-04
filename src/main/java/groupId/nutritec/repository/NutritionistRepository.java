@@ -1,6 +1,5 @@
 package groupId.nutritec.repository;
 
-
 import groupId.nutritec.model.Nutritionist;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
