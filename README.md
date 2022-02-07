@@ -52,7 +52,7 @@ Retorna todos os pacientes no banco de dados
 É esperado um json neste formato para salvar um paciente no banco de dados
 ```js
     {
-        "cpf": "15263584965"
+        "cpf": "15263584965",
         "name": "Jorgina",
         "age": 25,
         "weight": 56.16,
