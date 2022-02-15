@@ -36,10 +36,10 @@ Deleta um nutricionista a partir de sua matrícula
    }
 ```
 
-@get `nutritionists/healthplan/{healthPlan}`\
+@get `/nutritionists/healthplan/{healthPlan}`\
 Retorna nutricionistas por plano de saúde
 
-@get `nutritionists/{registration}`\
+@get `/nutritionists/{registration}`\
 Retorna um nutricionista a partir de sua matrícula
 
 
@@ -52,7 +52,7 @@ Retorna todos os pacientes no banco de dados
 É esperado um json neste formato para salvar um paciente no banco de dados
 ```js
     {
-        "cpf": "15263584965"
+        "cpf": "15263584965",
         "name": "Jorgina",
         "age": 25,
         "weight": 56.16,
