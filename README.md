@@ -36,10 +36,10 @@ Deleta um nutricionista a partir de sua matrícula
    }
 ```
 
-@get `nutritionists/healthplan/{healthPlan}`\
+@get `/nutritionists/healthplan/{healthPlan}`\
 Retorna nutricionistas por plano de saúde
 
-@get `nutritionists/{registration}`\
+@get `/nutritionists/{registration}`\
 Retorna um nutricionista a partir de sua matrícula
 
 
