@@ -3,8 +3,12 @@ package groupId.nutritec.controller;
 import groupId.nutritec.model.Nutritionist;
 import groupId.nutritec.service.NutritionistService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -26,8 +30,10 @@ public class NutritionistController {
     }
 
     @PostMapping
-    public Nutritionist create(@RequestBody Nutritionist nutritionist) {
-        return nutritionistService.create(nutritionist);
+    public ResponseEntity<Nutritionist> create(@RequestBody Nutritionist nutritionist) {
+        nutritionist = nutritionistService.create(nutritionist);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(nutritionist.getRegistration()).toUri();
+        return ResponseEntity.created(uri).build();
     }
 
     @DeleteMapping("/{registration}")
